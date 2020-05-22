@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/cFAG/Documents/CustomWindows/Logger.cpp
+Logger.h
+C:/Users/cFAG/Documents/CustomWindows/Logger.h
+
+C:/Users/cFAG/Documents/CustomWindows/Logger.h
+fstream
+-
+string
+-
+ctime
+-
+
+C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.cpp
+OffscreenBuffer.h
+C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.h
+
+C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.h
+windows.h
+-
+
+C:/Users/cFAG/Documents/CustomWindows/main.cpp
+windows.h
+-
+iostream
+-
+cstdint
+-
+Logger.h
+C:/Users/cFAG/Documents/CustomWindows/Logger.h
+OffscreenBuffer.h
+C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.h
+
