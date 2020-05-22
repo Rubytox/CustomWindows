@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/cFAG/Documents/CustomWindows/Logger.cpp
-Logger.h
-C:/Users/cFAG/Documents/CustomWindows/Logger.h
-
 C:/Users/cFAG/Documents/CustomWindows/Logger.h
 fstream
 -
@@ -24,6 +20,8 @@ C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.h
 
 C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.h
 windows.h
+-
+cstdint
 -
 
 C:/Users/cFAG/Documents/CustomWindows/main.cpp

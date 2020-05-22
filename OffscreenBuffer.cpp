@@ -21,6 +21,8 @@ OffscreenBuffer::OffscreenBuffer(int width, int height) : _width(width), _height
 
     _bytesPerPixel = _info->bmiHeader.biBitCount / 8;
 
+    _bgColor = 0;
+
     resize(width, height);
 }
 
@@ -68,3 +70,89 @@ int OffscreenBuffer::getWidth() const {
 int OffscreenBuffer::getHeight() const {
     return _height;
 }
+
+void OffscreenBuffer::drawPixel(int x, int y, uint8_t R, uint8_t G, uint8_t B) {
+    drawPixel(x, y, RGBToColor(R, G, B));
+}
+
+void OffscreenBuffer::drawPixel(int x, int y, color_t color) {
+    if (x < 0 || x >= _width ||
+        y < 0 || y >= _height) {
+        // TODO: handle error case
+        return;
+    }
+
+    *getPixel(x, y) = color;
+}
+
+void OffscreenBuffer::drawRect(int x, int y, int width, int height, uint8_t R, uint8_t G, uint8_t B) {
+    /*
+     * This method draws the following border :
+     *        (x, y)                    (x+width, y)
+     *              +------------------+
+     *              |                  |
+     *              |                  |
+     *              |                  |
+     *              +------------------+
+     * (x, y+height)                    (x+width, y+height)
+     */
+
+    color_t color = RGBToColor(R, G, B);
+
+    for (int xPos = x; xPos < x + width; xPos++) {
+        drawPixel(xPos, y, color);
+    }
+    for (int yPos = y; yPos < y + height; yPos++) {
+        drawPixel(x, yPos, color);
+    }
+    for (int xPos = x; xPos < x + width; xPos++) {
+        drawPixel(xPos, y + height, color);
+    }
+    for (int yPos = y; yPos < y + height; yPos++) {
+        drawPixel(x + width, yPos, color);
+    }
+}
+
+
+OffscreenBuffer::pixel_t *OffscreenBuffer::getFirstPixel() const {
+    return (pixel_t *) _memory;
+}
+
+OffscreenBuffer::pixel_t *OffscreenBuffer::getOuterBound() const {
+    int nbPixels = _width * _height;
+    return getFirstPixel() + nbPixels;
+}
+
+OffscreenBuffer::pixel_t *OffscreenBuffer::getPixel(int x, int y) const {
+    pixel_t *firstPixel = getFirstPixel();
+
+    // Seems like I can't multiply pointers as we do with sum operator...
+    // Todo: look into that
+    int col = 0;
+    while (col++ < y)
+        firstPixel += _width;
+    return firstPixel + x;
+}
+
+OffscreenBuffer::color_t OffscreenBuffer::RGBToColor(uint8_t R, uint8_t G, uint8_t B) {
+   return (R << 16u)
+          | (G << 8u)
+          | B;
+}
+
+void OffscreenBuffer::fill(OffscreenBuffer::color_t color) {
+    for (pixel_t *pixel = getFirstPixel();
+         pixel < getOuterBound();
+         pixel++) {
+        *pixel = color;
+    }
+}
+
+void OffscreenBuffer::fill(uint8_t R, uint8_t G, uint8_t B) {
+    fill(RGBToColor(R, G, B));
+}
+
+void OffscreenBuffer::clear() {
+    fill(_bgColor);
+}
+

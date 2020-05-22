@@ -74,10 +74,6 @@ internal void
 Win32UpdateWindow(const OffscreenBuffer &buffer, HDC deviceContext, int width, int height)
 {
     StretchDIBits(deviceContext,
-                  /*
-                  x, y, width, height,   // dest
-                  x, y, width, height,   // src
-                   */
                   0, 0, width, height,
                   0, 0, buffer.getWidth(), buffer.getHeight(),
                   buffer.getMemory(),
@@ -140,7 +136,6 @@ WinMain(HINSTANCE instance,
 
     WNDCLASS windowClass = {};
 
-
     windowClass.style = CS_HREDRAW | CS_VREDRAW;
     windowClass.lpfnWndProc = Win32MainWindowCallback;
     windowClass.hInstance = instance;
@@ -167,6 +162,7 @@ WinMain(HINSTANCE instance,
             SetWindowLongPtrA(window, GWLP_USERDATA, (LONG) buffer);
 
             isRunning = true;
+
             int xOffset = 0;
             int yOffset = 0;
 
@@ -181,15 +177,20 @@ WinMain(HINSTANCE instance,
                 }
 
                 auto *buffer = (OffscreenBuffer *) GetWindowLongPtrA(window, GWLP_USERDATA);
-                Win32RenderWeirdGradient(*buffer, xOffset, yOffset);
+                buffer->clear();
+                buffer->drawRect(10 + xOffset, 10 + yOffset, 30, 30, 0xFF, 0, 0);
 
                 HDC deviceContext = GetDC(window);
                 windowDimensions dimensions = Win32GetWindowDimensions(window);
                 Win32UpdateWindow(*buffer, deviceContext, dimensions.width, dimensions.height);
                 ReleaseDC(window, deviceContext);
 
-                xOffset--;
+                xOffset++;
                 yOffset++;
+                if (xOffset >= dimensions.width)
+                    xOffset = 0;
+                if (yOffset >= dimensions.height)
+                    yOffset = 0;
             }
 
             // We're not running anymore
