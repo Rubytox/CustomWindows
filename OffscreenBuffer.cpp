@@ -4,6 +4,8 @@
 
 #include "OffscreenBuffer.h"
 
+/* ==============================[ CONSTRUCTORS ]============================== */
+
 OffscreenBuffer::OffscreenBuffer(int width, int height) : _width(width), _height(height), _memory(nullptr) {
     _info = (BITMAPINFO *) malloc(sizeof(BITMAPINFO));
 
@@ -22,15 +24,60 @@ OffscreenBuffer::OffscreenBuffer(int width, int height) : _width(width), _height
     _bytesPerPixel = _info->bmiHeader.biBitCount / 8;
 
     _bgColor = 0;
+    _activeColor = RGBToColor(0xFF, 0, 0);
 
     resize(width, height);
 }
 
+/* ==============================[ DESTRUCTORS ]============================== */
 OffscreenBuffer::~OffscreenBuffer() {
     free(_info);
     memoryRenew();
 }
 
+
+/* ==============================[ GETTERS-SETTERS ]============================== */
+BITMAPINFO *OffscreenBuffer::getInfo() const {
+    return _info;
+}
+
+void *OffscreenBuffer::getMemory() const {
+    return _memory;
+}
+
+int OffscreenBuffer::getWidth() const {
+    return _width;
+}
+
+int OffscreenBuffer::getHeight() const {
+    return _height;
+}
+
+void OffscreenBuffer::setColor(uint8_t R, uint8_t G, uint8_t B) {
+    _activeColor = RGBToColor(R, G, B);
+}
+
+OffscreenBuffer::pixel_t *OffscreenBuffer::getFirstPixel() const {
+    return (pixel_t *) _memory;
+}
+
+OffscreenBuffer::pixel_t *OffscreenBuffer::getOuterBound() const {
+    int nbPixels = _width * _height;
+    return getFirstPixel() + nbPixels;
+}
+
+OffscreenBuffer::pixel_t *OffscreenBuffer::getPixel(int x, int y) const {
+    pixel_t *firstPixel = getFirstPixel();
+
+    // Seems like I can't multiply pointers as we do with sum operator...
+    // Todo: look into that
+    int col = 0;
+    while (col++ < y)
+        firstPixel += _width;
+    return firstPixel + x;
+}
+
+/* ==============================[ UTILITARIES ]============================== */
 void OffscreenBuffer::memoryRenew() {
     if (_memory)
         VirtualFree(_memory, 0, MEM_RELEASE);
@@ -55,34 +102,17 @@ void OffscreenBuffer::resize(int width, int height) {
     memoryAlloc(memorySize);
 }
 
-BITMAPINFO *OffscreenBuffer::getInfo() const {
-    return _info;
+OffscreenBuffer::color_t OffscreenBuffer::RGBToColor(uint8_t R, uint8_t G, uint8_t B) {
+    return (R << 16u)
+           | (G << 8u)
+           | B;
 }
 
-void *OffscreenBuffer::getMemory() const {
-    return _memory;
-}
 
-int OffscreenBuffer::getWidth() const {
-    return _width;
-}
-
-int OffscreenBuffer::getHeight() const {
-    return _height;
-}
+/* ==============================[ DRAWING WRAPPERS ]============================== */
 
 void OffscreenBuffer::drawPixel(int x, int y, uint8_t R, uint8_t G, uint8_t B) {
     drawPixel(x, y, RGBToColor(R, G, B));
-}
-
-void OffscreenBuffer::drawPixel(int x, int y, color_t color) {
-    if (x < 0 || x >= _width ||
-        y < 0 || y >= _height) {
-        // TODO: handle error case
-        return;
-    }
-
-    *getPixel(x, y) = color;
 }
 
 void OffscreenBuffer::drawRect(int x, int y, int width, int height, uint8_t R, uint8_t G, uint8_t B) {
@@ -98,7 +128,38 @@ void OffscreenBuffer::drawRect(int x, int y, int width, int height, uint8_t R, u
      */
 
     color_t color = RGBToColor(R, G, B);
+    drawRect(x, y, width, height, color);
+}
 
+void OffscreenBuffer::fill(uint8_t R, uint8_t G, uint8_t B) {
+    fill(RGBToColor(R, G, B));
+}
+
+void OffscreenBuffer::clear() {
+    fill(_bgColor);
+}
+
+void OffscreenBuffer::drawPixel(int x, int y) {
+    drawPixel(x, y, _activeColor);
+}
+
+void OffscreenBuffer::drawRect(int x, int y, int width, int height) {
+    drawRect(x, y, width, height, _activeColor);
+}
+
+/* ==============================[ DRAWING INTERNALS ]============================== */
+
+void OffscreenBuffer::drawPixel(int x, int y, color_t color) {
+    if (x < 0 || x >= _width ||
+        y < 0 || y >= _height) {
+        // TODO: handle error case
+        return;
+    }
+
+    *getPixel(x, y) = color;
+}
+
+void OffscreenBuffer::drawRect(int x, int y, int width, int height, OffscreenBuffer::color_t color) {
     for (int xPos = x; xPos < x + width; xPos++) {
         drawPixel(xPos, y, color);
     }
@@ -113,33 +174,6 @@ void OffscreenBuffer::drawRect(int x, int y, int width, int height, uint8_t R, u
     }
 }
 
-
-OffscreenBuffer::pixel_t *OffscreenBuffer::getFirstPixel() const {
-    return (pixel_t *) _memory;
-}
-
-OffscreenBuffer::pixel_t *OffscreenBuffer::getOuterBound() const {
-    int nbPixels = _width * _height;
-    return getFirstPixel() + nbPixels;
-}
-
-OffscreenBuffer::pixel_t *OffscreenBuffer::getPixel(int x, int y) const {
-    pixel_t *firstPixel = getFirstPixel();
-
-    // Seems like I can't multiply pointers as we do with sum operator...
-    // Todo: look into that
-    int col = 0;
-    while (col++ < y)
-        firstPixel += _width;
-    return firstPixel + x;
-}
-
-OffscreenBuffer::color_t OffscreenBuffer::RGBToColor(uint8_t R, uint8_t G, uint8_t B) {
-   return (R << 16u)
-          | (G << 8u)
-          | B;
-}
-
 void OffscreenBuffer::fill(OffscreenBuffer::color_t color) {
     for (pixel_t *pixel = getFirstPixel();
          pixel < getOuterBound();
@@ -147,12 +181,3 @@ void OffscreenBuffer::fill(OffscreenBuffer::color_t color) {
         *pixel = color;
     }
 }
-
-void OffscreenBuffer::fill(uint8_t R, uint8_t G, uint8_t B) {
-    fill(RGBToColor(R, G, B));
-}
-
-void OffscreenBuffer::clear() {
-    fill(_bgColor);
-}
-

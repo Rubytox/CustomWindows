@@ -23,16 +23,25 @@ public:
     [[nodiscard]] int getWidth() const;
     [[nodiscard]] int getHeight() const;
 
+    void setColor(uint8_t R, uint8_t G, uint8_t B);
+
     void drawPixel(int x, int y,
                    uint8_t R, uint8_t G, uint8_t B);
+    void drawPixel(int x, int y);
 
     void drawRect(int x, int y,
                   int width, int height,
                   uint8_t R, uint8_t G, uint8_t B);
+    void drawRect(int x, int y,
+                  int width, int height);
 
     void fill(uint8_t R, uint8_t G, uint8_t B);
 
     void clear();
+
+    void drawLine(int xStart, int yStart,
+                  int xEnd, int yEnd,
+                  uint8_t R, uint8_t G, uint8_t B);
 
 
 private:
@@ -43,6 +52,7 @@ private:
     int _bytesPerPixel;
 
     color_t _bgColor;
+    color_t _activeColor;
 
     void memoryAlloc(int memorySize);
 
@@ -51,6 +61,7 @@ private:
     [[nodiscard]] pixel_t *getPixel(int x, int y) const;
 
     void drawPixel(int x, int y, color_t color);
+    void drawRect(int x, int y, int width, int height, color_t color);
     static color_t RGBToColor(uint8_t R, uint8_t G, uint8_t B) ;
 
     void fill(color_t color);

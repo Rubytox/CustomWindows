@@ -159,6 +159,7 @@ WinMain(HINSTANCE instance,
         if (window) {
             windowDimensions dimensions = {1200, 700};
             auto *buffer = new OffscreenBuffer(dimensions.width, dimensions.height);
+            buffer->setColor(0, 0xFF, 0);
             SetWindowLongPtrA(window, GWLP_USERDATA, (LONG) buffer);
 
             isRunning = true;
@@ -176,9 +177,8 @@ WinMain(HINSTANCE instance,
                     DispatchMessageA(&message);
                 }
 
-                auto *buffer = (OffscreenBuffer *) GetWindowLongPtrA(window, GWLP_USERDATA);
                 buffer->clear();
-                buffer->drawRect(10 + xOffset, 10 + yOffset, 30, 30, 0xFF, 0, 0);
+                buffer->drawRect(10 + xOffset, 10 + yOffset, 30, 30);
 
                 HDC deviceContext = GetDC(window);
                 windowDimensions dimensions = Win32GetWindowDimensions(window);
