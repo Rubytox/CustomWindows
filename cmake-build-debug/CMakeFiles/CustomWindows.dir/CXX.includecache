@@ -6,29 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/cFAG/Documents/CustomWindows/Logger.h
-fstream
--
-string
--
-ctime
--
-
-C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.h
-windows.h
--
-cstdint
--
-
-C:/Users/cFAG/Documents/CustomWindows/main.cpp
-windows.h
--
-iostream
--
-cstdint
--
-Logger.h
-C:/Users/cFAG/Documents/CustomWindows/Logger.h
+C:/Users/cFAG/Documents/CustomWindows/src/buffer/OffscreenBuffer.cpp
 OffscreenBuffer.h
-C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.h
+C:/Users/cFAG/Documents/CustomWindows/src/buffer/OffscreenBuffer.h
+
+C:/Users/cFAG/Documents/CustomWindows/src/buffer/OffscreenBuffer.h
+Windows.h
+-
+cstdint
+-
 

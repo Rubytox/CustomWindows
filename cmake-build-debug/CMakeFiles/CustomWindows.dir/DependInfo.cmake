@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/cFAG/Documents/CustomWindows/Logger.cpp" "C:/Users/cFAG/Documents/CustomWindows/cmake-build-debug/CMakeFiles/CustomWindows.dir/Logger.cpp.obj"
-  "C:/Users/cFAG/Documents/CustomWindows/OffscreenBuffer.cpp" "C:/Users/cFAG/Documents/CustomWindows/cmake-build-debug/CMakeFiles/CustomWindows.dir/OffscreenBuffer.cpp.obj"
-  "C:/Users/cFAG/Documents/CustomWindows/main.cpp" "C:/Users/cFAG/Documents/CustomWindows/cmake-build-debug/CMakeFiles/CustomWindows.dir/main.cpp.obj"
+  "C:/Users/cFAG/Documents/CustomWindows/src/buffer/OffscreenBuffer.cpp" "C:/Users/cFAG/Documents/CustomWindows/cmake-build-debug/CMakeFiles/CustomWindows.dir/src/buffer/OffscreenBuffer.cpp.obj"
+  "C:/Users/cFAG/Documents/CustomWindows/src/main.cpp" "C:/Users/cFAG/Documents/CustomWindows/cmake-build-debug/CMakeFiles/CustomWindows.dir/src/main.cpp.obj"
+  "C:/Users/cFAG/Documents/CustomWindows/src/util/Logger.cpp" "C:/Users/cFAG/Documents/CustomWindows/cmake-build-debug/CMakeFiles/CustomWindows.dir/src/util/Logger.cpp.obj"
+  "C:/Users/cFAG/Documents/CustomWindows/src/util/ModularInt.cpp" "C:/Users/cFAG/Documents/CustomWindows/cmake-build-debug/CMakeFiles/CustomWindows.dir/src/util/ModularInt.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CustomWindows.dir/Logger.cpp.obj"
-  "CMakeFiles/CustomWindows.dir/OffscreenBuffer.cpp.obj"
-  "CMakeFiles/CustomWindows.dir/main.cpp.obj"
+  "CMakeFiles/CustomWindows.dir/src/buffer/OffscreenBuffer.cpp.obj"
+  "CMakeFiles/CustomWindows.dir/src/main.cpp.obj"
+  "CMakeFiles/CustomWindows.dir/src/util/Logger.cpp.obj"
+  "CMakeFiles/CustomWindows.dir/src/util/ModularInt.cpp.obj"
   "CustomWindows.exe"
   "CustomWindows.exe.manifest"
   "CustomWindows.lib"

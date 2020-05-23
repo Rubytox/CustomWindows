@@ -124,86 +124,113 @@ CustomWindows\fast:
 	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\build
 .PHONY : CustomWindows\fast
 
-Logger.obj: Logger.cpp.obj
+src\buffer\OffscreenBuffer.obj: src\buffer\OffscreenBuffer.cpp.obj
 
-.PHONY : Logger.obj
-
-# target to build an object file
-Logger.cpp.obj:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\Logger.cpp.obj
-.PHONY : Logger.cpp.obj
-
-Logger.i: Logger.cpp.i
-
-.PHONY : Logger.i
-
-# target to preprocess a source file
-Logger.cpp.i:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\Logger.cpp.i
-.PHONY : Logger.cpp.i
-
-Logger.s: Logger.cpp.s
-
-.PHONY : Logger.s
-
-# target to generate assembly for a file
-Logger.cpp.s:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\Logger.cpp.s
-.PHONY : Logger.cpp.s
-
-OffscreenBuffer.obj: OffscreenBuffer.cpp.obj
-
-.PHONY : OffscreenBuffer.obj
+.PHONY : src\buffer\OffscreenBuffer.obj
 
 # target to build an object file
-OffscreenBuffer.cpp.obj:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.obj
-.PHONY : OffscreenBuffer.cpp.obj
+src\buffer\OffscreenBuffer.cpp.obj:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.obj
+.PHONY : src\buffer\OffscreenBuffer.cpp.obj
 
-OffscreenBuffer.i: OffscreenBuffer.cpp.i
+src\buffer\OffscreenBuffer.i: src\buffer\OffscreenBuffer.cpp.i
 
-.PHONY : OffscreenBuffer.i
+.PHONY : src\buffer\OffscreenBuffer.i
 
 # target to preprocess a source file
-OffscreenBuffer.cpp.i:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.i
-.PHONY : OffscreenBuffer.cpp.i
+src\buffer\OffscreenBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.i
+.PHONY : src\buffer\OffscreenBuffer.cpp.i
 
-OffscreenBuffer.s: OffscreenBuffer.cpp.s
+src\buffer\OffscreenBuffer.s: src\buffer\OffscreenBuffer.cpp.s
 
-.PHONY : OffscreenBuffer.s
+.PHONY : src\buffer\OffscreenBuffer.s
 
 # target to generate assembly for a file
-OffscreenBuffer.cpp.s:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.s
-.PHONY : OffscreenBuffer.cpp.s
+src\buffer\OffscreenBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.s
+.PHONY : src\buffer\OffscreenBuffer.cpp.s
 
-main.obj: main.cpp.obj
+src\main.obj: src\main.cpp.obj
 
-.PHONY : main.obj
+.PHONY : src\main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+src\main.cpp.obj:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\main.cpp.obj
+.PHONY : src\main.cpp.obj
 
-main.i: main.cpp.i
+src\main.i: src\main.cpp.i
 
-.PHONY : main.i
+.PHONY : src\main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\main.cpp.i
-.PHONY : main.cpp.i
+src\main.cpp.i:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\main.cpp.i
+.PHONY : src\main.cpp.i
 
-main.s: main.cpp.s
+src\main.s: src\main.cpp.s
 
-.PHONY : main.s
+.PHONY : src\main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\main.cpp.s
-.PHONY : main.cpp.s
+src\main.cpp.s:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\main.cpp.s
+.PHONY : src\main.cpp.s
+
+src\util\Logger.obj: src\util\Logger.cpp.obj
+
+.PHONY : src\util\Logger.obj
+
+# target to build an object file
+src\util\Logger.cpp.obj:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.obj
+.PHONY : src\util\Logger.cpp.obj
+
+src\util\Logger.i: src\util\Logger.cpp.i
+
+.PHONY : src\util\Logger.i
+
+# target to preprocess a source file
+src\util\Logger.cpp.i:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.i
+.PHONY : src\util\Logger.cpp.i
+
+src\util\Logger.s: src\util\Logger.cpp.s
+
+.PHONY : src\util\Logger.s
+
+# target to generate assembly for a file
+src\util\Logger.cpp.s:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.s
+.PHONY : src\util\Logger.cpp.s
+
+src\util\ModularInt.obj: src\util\ModularInt.cpp.obj
+
+.PHONY : src\util\ModularInt.obj
+
+# target to build an object file
+src\util\ModularInt.cpp.obj:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.obj
+.PHONY : src\util\ModularInt.cpp.obj
+
+src\util\ModularInt.i: src\util\ModularInt.cpp.i
+
+.PHONY : src\util\ModularInt.i
+
+# target to preprocess a source file
+src\util\ModularInt.cpp.i:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.i
+.PHONY : src\util\ModularInt.cpp.i
+
+src\util\ModularInt.s: src\util\ModularInt.cpp.s
+
+.PHONY : src\util\ModularInt.s
+
+# target to generate assembly for a file
+src\util\ModularInt.cpp.s:
+	$(MAKE) -f CMakeFiles\CustomWindows.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.s
+.PHONY : src\util\ModularInt.cpp.s
 
 # Help Target
 help:
@@ -214,15 +241,18 @@ help:
 	@echo ... CustomWindows
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Logger.obj
-	@echo ... Logger.i
-	@echo ... Logger.s
-	@echo ... OffscreenBuffer.obj
-	@echo ... OffscreenBuffer.i
-	@echo ... OffscreenBuffer.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/buffer/OffscreenBuffer.obj
+	@echo ... src/buffer/OffscreenBuffer.i
+	@echo ... src/buffer/OffscreenBuffer.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/util/Logger.obj
+	@echo ... src/util/Logger.i
+	@echo ... src/util/Logger.s
+	@echo ... src/util/ModularInt.obj
+	@echo ... src/util/ModularInt.i
+	@echo ... src/util/ModularInt.s
 .PHONY : help
 
 

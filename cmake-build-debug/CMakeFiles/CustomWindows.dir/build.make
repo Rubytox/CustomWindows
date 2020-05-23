@@ -58,78 +58,99 @@ include CMakeFiles\CustomWindows.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\CustomWindows.dir\flags.make
 
-CMakeFiles\CustomWindows.dir\main.cpp.obj: CMakeFiles\CustomWindows.dir\flags.make
-CMakeFiles\CustomWindows.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CustomWindows.dir/main.cpp.obj"
+CMakeFiles\CustomWindows.dir\src\main.cpp.obj: CMakeFiles\CustomWindows.dir\flags.make
+CMakeFiles\CustomWindows.dir\src\main.cpp.obj: ..\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CustomWindows.dir/src/main.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CustomWindows.dir\main.cpp.obj /FdCMakeFiles\CustomWindows.dir\ /FS -c C:\Users\cFAG\Documents\CustomWindows\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CustomWindows.dir\src\main.cpp.obj /FdCMakeFiles\CustomWindows.dir\ /FS -c C:\Users\cFAG\Documents\CustomWindows\src\main.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomWindows.dir/main.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\CustomWindows.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cFAG\Documents\CustomWindows\main.cpp
+CMakeFiles\CustomWindows.dir\src\main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomWindows.dir/src/main.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\CustomWindows.dir\src\main.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cFAG\Documents\CustomWindows\src\main.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomWindows.dir/main.cpp.s"
+CMakeFiles\CustomWindows.dir\src\main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomWindows.dir/src/main.cpp.s"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CustomWindows.dir\main.cpp.s /c C:\Users\cFAG\Documents\CustomWindows\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CustomWindows.dir\src\main.cpp.s /c C:\Users\cFAG\Documents\CustomWindows\src\main.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\Logger.cpp.obj: CMakeFiles\CustomWindows.dir\flags.make
-CMakeFiles\CustomWindows.dir\Logger.cpp.obj: ..\Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CustomWindows.dir/Logger.cpp.obj"
+CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.obj: CMakeFiles\CustomWindows.dir\flags.make
+CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.obj: ..\src\util\Logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CustomWindows.dir/src/util/Logger.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CustomWindows.dir\Logger.cpp.obj /FdCMakeFiles\CustomWindows.dir\ /FS -c C:\Users\cFAG\Documents\CustomWindows\Logger.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CustomWindows.dir\src\util\Logger.cpp.obj /FdCMakeFiles\CustomWindows.dir\ /FS -c C:\Users\cFAG\Documents\CustomWindows\src\util\Logger.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\Logger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomWindows.dir/Logger.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\CustomWindows.dir\Logger.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cFAG\Documents\CustomWindows\Logger.cpp
+CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomWindows.dir/src/util/Logger.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cFAG\Documents\CustomWindows\src\util\Logger.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\Logger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomWindows.dir/Logger.cpp.s"
+CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomWindows.dir/src/util/Logger.cpp.s"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CustomWindows.dir\Logger.cpp.s /c C:\Users\cFAG\Documents\CustomWindows\Logger.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CustomWindows.dir\src\util\Logger.cpp.s /c C:\Users\cFAG\Documents\CustomWindows\src\util\Logger.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.obj: CMakeFiles\CustomWindows.dir\flags.make
-CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.obj: ..\OffscreenBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CustomWindows.dir/OffscreenBuffer.cpp.obj"
+CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.obj: CMakeFiles\CustomWindows.dir\flags.make
+CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.obj: ..\src\buffer\OffscreenBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CustomWindows.dir/src/buffer/OffscreenBuffer.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.obj /FdCMakeFiles\CustomWindows.dir\ /FS -c C:\Users\cFAG\Documents\CustomWindows\OffscreenBuffer.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.obj /FdCMakeFiles\CustomWindows.dir\ /FS -c C:\Users\cFAG\Documents\CustomWindows\src\buffer\OffscreenBuffer.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomWindows.dir/OffscreenBuffer.cpp.i"
-	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cFAG\Documents\CustomWindows\OffscreenBuffer.cpp
+CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomWindows.dir/src/buffer/OffscreenBuffer.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cFAG\Documents\CustomWindows\src\buffer\OffscreenBuffer.cpp
 <<
 
-CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomWindows.dir/OffscreenBuffer.cpp.s"
+CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomWindows.dir/src/buffer/OffscreenBuffer.cpp.s"
 	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.s /c C:\Users\cFAG\Documents\CustomWindows\OffscreenBuffer.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.s /c C:\Users\cFAG\Documents\CustomWindows\src\buffer\OffscreenBuffer.cpp
+<<
+
+CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.obj: CMakeFiles\CustomWindows.dir\flags.make
+CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.obj: ..\src\util\ModularInt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CustomWindows.dir/src/util/ModularInt.cpp.obj"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.obj /FdCMakeFiles\CustomWindows.dir\ /FS -c C:\Users\cFAG\Documents\CustomWindows\src\util\ModularInt.cpp
+<<
+
+CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CustomWindows.dir/src/util/ModularInt.cpp.i"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\cFAG\Documents\CustomWindows\src\util\ModularInt.cpp
+<<
+
+CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CustomWindows.dir/src/util/ModularInt.cpp.s"
+	C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.s /c C:\Users\cFAG\Documents\CustomWindows\src\util\ModularInt.cpp
 <<
 
 # Object files for target CustomWindows
 CustomWindows_OBJECTS = \
-"CMakeFiles\CustomWindows.dir\main.cpp.obj" \
-"CMakeFiles\CustomWindows.dir\Logger.cpp.obj" \
-"CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.obj"
+"CMakeFiles\CustomWindows.dir\src\main.cpp.obj" \
+"CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.obj" \
+"CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.obj" \
+"CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.obj"
 
 # External object files for target CustomWindows
 CustomWindows_EXTERNAL_OBJECTS =
 
-CustomWindows.exe: CMakeFiles\CustomWindows.dir\main.cpp.obj
-CustomWindows.exe: CMakeFiles\CustomWindows.dir\Logger.cpp.obj
-CustomWindows.exe: CMakeFiles\CustomWindows.dir\OffscreenBuffer.cpp.obj
+CustomWindows.exe: CMakeFiles\CustomWindows.dir\src\main.cpp.obj
+CustomWindows.exe: CMakeFiles\CustomWindows.dir\src\util\Logger.cpp.obj
+CustomWindows.exe: CMakeFiles\CustomWindows.dir\src\buffer\OffscreenBuffer.cpp.obj
+CustomWindows.exe: CMakeFiles\CustomWindows.dir\src\util\ModularInt.cpp.obj
 CustomWindows.exe: CMakeFiles\CustomWindows.dir\build.make
 CustomWindows.exe: CMakeFiles\CustomWindows.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable CustomWindows.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CustomWindows.exe"
 	"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\CustomWindows.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100162~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100162~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MIB055~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\CustomWindows.dir\objects1.rsp @<<
  /out:CustomWindows.exe /implib:CustomWindows.lib /pdb:C:\Users\cFAG\Documents\CustomWindows\cmake-build-debug\CustomWindows.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:windows  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
